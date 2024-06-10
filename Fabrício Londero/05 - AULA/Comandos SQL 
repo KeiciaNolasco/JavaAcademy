@@ -1,0 +1,27 @@
+
+-- DDL(Data Definition Language):
+
+-- Comando cria um banco de dados:
+CREATE DATABASE aula;
+
+-- Comando cria uma tabela:
+CREATE TABLE Cursos
+	(
+	id integer,
+	nome varchar(50),
+	ch integer
+	)
+
+-- Comando cria uma tabela, com chave primária(não permite que dados se repitam):
+CREATE table pessoas
+	(
+	CPF varchar(11) primary key,
+	RG varchar(10) unique
+	)
+
+-- Comando deleta um banco de dados:
+DROP DATABASE aula;
+
+ALTER
+
+-- DML(Data Manipulation Language):
