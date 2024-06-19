@@ -1,4 +1,3 @@
-
 create database dinossauros;
 
 create table regioes
@@ -150,3 +149,4 @@ join descobridores on dinossauros.fk_descobridor = descobridores.id
 join eras on dinossauros.fk_era = eras.id
 join regioes on dinossauros.fk_regiao = regioes.id
 order by dinossauros.nome
+
