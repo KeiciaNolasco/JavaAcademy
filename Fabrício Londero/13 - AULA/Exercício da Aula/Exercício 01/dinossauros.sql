@@ -83,6 +83,10 @@ VALUES ('Anquilossauro', 6, 1906, (SELECT id FROM grupos WHERE nome = 'Anquiloss
 SELECT * FROM dinossauros;
 
 -- Selecão da Tabela de Dinossauros por Nome:
+SELECT * FROM dinossauros d
+ORDER BY nome;
+
+-- Selecão da Tabela de Dinossauros por Nome:
 SELECT nome FROM dinossauros;
 
 -- Selecão da Tabela de Dinossauros por Toneladas maior que 4:
@@ -93,9 +97,26 @@ WHERE toneladas > 4;
 SELECT * FROM dinossauros
 WHERE ano_descoberta = 1909;
 
+-- Selecão da Tabela de Dinossauros por Ano da Descoberta:
+SELECT * FROM dinossauros d
+JOIN grupos g ON d.fk_grupo = g.id
+WHERE g.nome = 'Anquilossauros'
+ORDER BY d.ano_descoberta;
+
+-- Selecão da Tabela de Dinossauros por Descobridor:
+SELECT * FROM dinossauros
+JOIN descobridores des ON d.fk_descobridor = des.id
+ORDER BY des.nome;
+
 -- Selecão da Tabela de Dinossauros por Ano da Descoberta e Toneladas:
 SELECT * FROM dinossauros
 WHERE ano_descoberta = 1909 AND toneladas > 4;
+
+-- Selecão da Tabela de Dinossauros por Ceratopsídeos ou Anquilossauros entre 1900 e 1999:
+SELECT * FROM dinossauros d
+JOIN grupos g ON d.fk_grupo = g.id
+WHERE (g.nome = 'Ceratopsídeos' OR g.nome = 'Anquilossauros') 
+AND d.ano_descoberta BETWEEN 1900 AND 1999;
 
 -- Selecão da Tabela de Dinossauros por Ordem de Nome:
 SELECT nome, toneladas FROM dinossauros

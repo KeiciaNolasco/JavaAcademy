@@ -8,7 +8,7 @@ public class Main {
 
     private static String url = "jdbc:postgresql://localhost:5432/postgres";
     private static String user = "postgres";
-    private static String password = "----";
+    private static String password = "Enigma45#";
 
     public static void main(String[] args) {
         List<User> users = new ArrayList<User>();
@@ -36,7 +36,7 @@ public class Main {
             ps.setString(2, u.getEmail());
             return ps.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Falha ao conectar ao banco de dados");
+            System.out.println("Falha ao inserir ao banco de dados");
         }
         return 0;
     }
@@ -48,21 +48,24 @@ public class Main {
             ps.setInt(1, id);
             return ps.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("Falha ao deletar o usuário: " + e.getMessage());
         }
+        return 0;
     }
 
-    public int updateUser(User user) {
+    public static int updateUser(User user) {
         String query = "UPDATE User SET Name = ?, Email=? WHERE UserID = ?;";
-        try (Connection con = DriverManager.getConnection(url, this.user, password);
+        try (Connection con = DriverManager.getConnection(url, Main.user , password);
              PreparedStatement ps = con.prepareStatement(query)) {
             ps.setString(1, user.getName());
             ps.setString(2, user.getEmail());
             ps.setInt(3, user.getUserID());
             return ps.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
+        catch (SQLException e) {
+            System.out.println("Falha ao atualizar o usuário: " + e.getMessage());
+        }
+        return 0;
     }
 
 }
