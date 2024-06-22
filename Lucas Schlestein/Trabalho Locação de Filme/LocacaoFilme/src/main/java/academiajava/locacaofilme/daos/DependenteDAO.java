@@ -24,16 +24,19 @@ public class DependenteDAO {
         }
     }
 
-    public static void update(Dependente dependente) {
-        String sql = "UPDATE dependentes SET parentesco = ? WHERE fk_cod_cli = ? AND fk_cod_dep = ?";
+    public static void update(int dependenteId, String novoParentesco) {
+        String sql = "UPDATE dependentes SET parentesco = ? WHERE fk_cod_dep = ?";
         try (Connection connection = DatabaseConfig.getConnection();
              PreparedStatement ps = connection.prepareStatement(sql)) {
-            ps.setString(1, dependente.getParentesco());
-            ps.setInt(2, dependente.getCliente().getId());
-            ps.setInt(3, dependente.getDependente().getId());
-            ps.executeUpdate();
+            ps.setString(1, novoParentesco);
+            ps.setInt(2, dependenteId);
+            int affectedRows = ps.executeUpdate();
+            if (affectedRows == 0) {
+                throw new DatabaseException("Dependent with ID " + dependenteId + " not found for update");
+            }
+            System.out.println("Dependent with ID " + dependenteId + " updated successfully");
         } catch (SQLException e) {
-            throw new DatabaseException("Error updating dependent", e);
+            throw new DatabaseException("Error updating dependent with ID " + dependenteId, e);
         }
     }
 
@@ -42,9 +45,13 @@ public class DependenteDAO {
         try (Connection connection = DatabaseConfig.getConnection();
              PreparedStatement ps = connection.prepareStatement(sql)) {
             ps.setInt(1, dependenteId);
-            ps.executeUpdate();
+            int affectedRows = ps.executeUpdate();
+            if (affectedRows == 0) {
+                throw new DatabaseException("Dependent with ID " + dependenteId + " not found for deletion");
+            }
+            System.out.println("Dependent with ID " + dependenteId + " successfully deleted");
         } catch (SQLException e) {
-            throw new DatabaseException("Error deleting dependent", e);
+            throw new DatabaseException("Error deleting dependent with ID " + dependenteId, e);
         }
     }
 
@@ -55,17 +62,16 @@ public class DependenteDAO {
             ps.setInt(1, dependenteId);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                System.out.println("Dependente encontrado no banco de dados.");
-                Cliente cliente = new ClienteDAO().findById(rs.getInt("fk_cod_cli"));
-                Cliente dependenteCliente = new ClienteDAO().findById(rs.getInt("fk_cod_dep"));
-                return new Dependente(cliente, dependenteCliente, rs.getString("parentesco"));
+                return new Dependente(
+                        new ClienteDAO().findById(rs.getInt("fk_cod_cli")),
+                        new ClienteDAO().findById(rs.getInt("fk_cod_dep")),
+                        rs.getString("parentesco")
+                );
             } else {
-                System.out.println("Dependente não encontrado.");
-                throw new DatabaseException("Dependent not found");
+                throw new DatabaseException("Dependent with ID " + dependenteId + " not found");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
-            throw new DatabaseException("Error finding dependent", e);
+            throw new DatabaseException("Error when searching for dependent with ID " + dependenteId, e);
         }
     }
 

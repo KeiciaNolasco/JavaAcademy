@@ -273,15 +273,11 @@ public class Menu {
                 }
                 case "Dependente" -> {
                     DependenteDAO dependenteDAO = (DependenteDAO) dao;
-                    System.out.print("Digite o ID do cliente: ");
-                    int clienteId = scanner.nextInt();
-                    System.out.print("Digite o ID do dependente: ");
-                    int dependenteId = scanner.nextInt();
-                    scanner.nextLine();
-                    Dependente dependente = dependenteDAO.findById(dependenteId);
+                    Dependente dependente = dependenteDAO.findById(id);
                     System.out.print("Digite o novo parentesco: ");
-                    dependente.setParentesco(scanner.nextLine());
-                    dependenteDAO.update(dependente);
+                    String novoParentesco = scanner.nextLine();
+                    dependente.setParentesco(novoParentesco);
+                    dependenteDAO.update(id, novoParentesco);
                     System.out.println("Dependente atualizado com sucesso!");
                 }
                 case "Endereço" -> {
@@ -469,6 +465,7 @@ public class Menu {
             }
         } catch (Exception e) {
             System.out.println("Erro ao buscar " + entityName + ": " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -526,12 +523,7 @@ public class Menu {
                 }
                 case "Dependente" -> {
                     DependenteDAO dependenteDAO = (DependenteDAO) dao;
-                    System.out.print("Digite o ID do cliente: ");
-                    int clienteId = scanner.nextInt();
-                    System.out.print("Digite o ID do dependente: ");
-                    int dependenteId = scanner.nextInt();
-                    scanner.nextLine();
-                    dependenteDAO.deleteById(dependenteId);
+                    dependenteDAO.deleteById(id);
                     System.out.println("Dependente deletado com sucesso!");
                 }
                 case "Endereço" -> {
