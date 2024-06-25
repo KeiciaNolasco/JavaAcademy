@@ -27,6 +27,7 @@ public class Menu {
                 System.out.println("9- Filme Ator");
                 System.out.println("10- Locação");
                 System.out.println("11- Locação Filme");
+                System.out.println("12- Sair");
                 System.out.print("Digite o número do item que deseja configurar: ");
                 int option = scanner.nextInt();
                 scanner.nextLine();
@@ -43,6 +44,10 @@ public class Menu {
                     case 9 -> configureEntity(DAOLoader.createFilmeAtorDAO(), "FilmeAtor");
                     case 10 -> configureEntity(DAOLoader.createLocacaoDAO(), "Locação");
                     case 11 -> configureEntity(DAOLoader.createLocacaoFilmeDAO(), "Locação e Filme");
+                    case 12 -> {
+                        System.out.println("Encerrando o programa...");
+                        return;
+                    }
                     default -> System.out.println("Opção inválida.");
                 }
             } catch (Exception e) {
@@ -58,6 +63,7 @@ public class Menu {
         System.out.println("3- Buscar por ID");
         System.out.println("4- Listar");
         System.out.println("5- Deletar");
+        System.out.println("6- Voltar");
         System.out.print("Digite o número do item que deseja configurar: ");
         int option = scanner.nextInt();
         scanner.nextLine();
@@ -74,6 +80,10 @@ public class Menu {
                 case 3 -> findEntityById(dao, entityName);
                 case 4 -> listEntities(dao);
                 case 5 -> deleteEntityById(dao, entityName);
+                case 6 -> {
+                    System.out.println("Retornando ao menu principal...");
+                    return; // Sai do método e retorna ao menu principal
+                }
                 default -> System.out.println("Opção inválida.");
             }
         } catch (Exception e) {
