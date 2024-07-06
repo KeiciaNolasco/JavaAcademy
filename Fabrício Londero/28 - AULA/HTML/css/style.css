@@ -1,0 +1,81 @@
+body /*seletor*/
+{
+    background-color: lightcyan; /* propriedade:valor;*/
+    color: black;
+    background-image: url('../img/image.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-position: 2cm 2cm; */
+    /* background-position: 50% 10%; */
+    /* background-position: right bottom; */
+    background-position: right top;
+    font-size: 15px;
+}
+ 
+h2
+{
+    /* color: red;
+    background-color: green; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    /* font-variant: small-caps; */
+    font-weight: 900; /*largura da fonte*/
+    /* font-size: 2em; tamanho da fonte com base no elemento pai */
+    font-size: 200%;
+}
+ 
+p
+{
+    font-family: 'Courier New', Courier, monospace;
+    text-indent: 30px;
+    text-align: justify;
+    /* text-decoration: underline; */
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+    letter-spacing: -1px;
+    /* text-transform: lowercase; */
+    /* text-transform: uppercase; */
+}
+ 
+a
+{
+    color: blue;
+}
+ 
+a:hover
+{
+    color: orange;
+    font-style: italic;
+    background-color: black;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+ 
+/* a:link
+{
+    color: blue;
+}
+ 
+a:visited
+{
+    color: red;
+} */
+
+#buscadores
+{
+    color: red;
+}
+
+#minhaImagem
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
