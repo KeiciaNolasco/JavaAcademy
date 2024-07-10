@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <style src="scripts.js"></style>
+        <script>
+            //alert('Olá mundo!');
+
+            //let teste = "teste";
+            //teste = 1;
+            //teste = "1" + 1;
+            //teste = true;
+            //alert(teste);
+
+            //undefined; //indefinido
+            //null; //nulo
+
+            //let nome = "Fabiana";
+            //alert('Olá, ${nome}!');
+            //alert('Olá, ${1} - ${2}!', nome, idade);
+            //alert("Olá " + nome + " - " + idade);
+
+            var n1 = 10;
+            var n2 = 10.5;
+            var n3 = 10.5e3;
+            var n4 = 0xff;
+
+            var s1 = "teste";
+            var s2 = 'teste';
+
+            var b1 = true;
+            var b2 = false;
+
+            var u = undefined;
+            var n = null;
+
+            var obj = 
+            {
+                id : 5,
+                nome : "Fulano"
+            };
+
+            var array = ["lista", "de", "elementos"]; //Array
+
+            var func = function(x, y) {return x + y;};
+
+            //console.log(n1, n2, n3, n4);
+            //console.log(s1, s2);
+            //console.log(u, n);
+            //console.log(obj);
+
+            //alert(func(2,3));
+
+            //CONDICIONAIS
+
+            var numero = 1;
+
+            if(numero == 1)
+            {
+                console.log("Número é igual a 1");
+            }
+
+            if(numero == "1")
+            {
+                console.log("Número é igual a 1 (strung)");
+            }
+
+            if(numero === "1")  //Com 3 sinais de igual === verifica o conteudo (valor) e o tipo, vai dar erro
+            {
+                console.log("Número é igual a 1 (strung)");
+            }
+
+            //var bool = (numero == "1");
+            var resultado = (numero === "1")?"iguais":"diferente";
+            console.log("Operador ternário: " + resultado);
+
+            var aux = "";
+            if(numero === "1")
+            {
+                aux = "iguais";
+            }
+            else
+            {
+                aux = "diferentes";
+            }
+
+            console.log("if/else: " + aux);
+
+            var laranjas = 6;
+            switch(laranjas)
+            {
+            case 3:
+                console.log("Faça 1 copo de suco!");
+                break;
+            case 6:
+                console.log("Faça 2 copo de suco!");
+                break;
+            case 9:
+                console.log("Faça uma jara de suco!");
+                break;
+            default:
+                console.log("Faça quanto suco conseguir!");
+            }
+
+            var pessoas = ["João", "José", "Maria", "Carlos", "Joana"];
+            for(var i = 0; i < pessoas.length; i++)
+            {
+                console.log(pessoas[i]);
+            }
+
+            var soma = 0;
+            for (let i = 0; i <= 100; i++)
+            {
+                soma += i;
+            }
+ 
+        console.log("Soma de 0 a 100: " + soma);
+
+        </script>
+    </head>
+    <body>
+        Aula de JavaScript
+        <button> onclick="alert('Olá mundo!\nteste');">Clique aqui</button>
+    </body>
+</html>
