@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 - Formulário de cadastro de cliente com validações</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 10</h1>
+    <p>Formulário de cadastro de cliente com validações</p>
+    <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label>Pessoa:</label>
+        <input type="radio" id="fisica" name="pessoa" value="fisica" onclick="toggleFields()"> Física
+        <input type="radio" id="juridica" name="pessoa" value="juridica" onclick="toggleFields()"> Jurídica<br><br>
+        
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" disabled><br><br>
+        
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj" disabled><br><br>
+        
+        <label for="dob">Data de Nascimento:</label>
+        <input type="text" id="dob" name="dob" disabled onkeypress="return isNumber(event)"><br><br>
+        
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" name="address"><br><br>
+        
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" onkeypress="return isNumber(event)"><br><br>
+        
+        <label for="phone">Telefone:</label>
+        <input type="text" id="phone" name="phone"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        function toggleFields() {
+            const isFisica = document.getElementById('fisica').checked;
+            document.getElementById('cpf').disabled = !isFisica;
+            document.getElementById('cnpj').disabled = isFisica;
+            document.getElementById('dob').disabled = !isFisica;
+        }
+
+        function isNumber(event) {
+            const charCode = event.which ? event.which : event.keyCode;
+            return charCode >= 48 && charCode <= 57;
+        }
+    </script>
+</body>
+</html>

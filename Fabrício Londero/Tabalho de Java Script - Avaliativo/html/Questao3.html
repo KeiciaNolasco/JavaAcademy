@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Lista de opções que altera a cor do plano de fundo</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 3</h1>
+    <p>Lista de opções que altera a cor do plano de fundo</p>
+    <select id="colorSelect" onchange="changeBackgroundColor()">
+        <option value="">Selecione uma cor</option>
+        <option value="red">Vermelho</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+        <option value="yellow">Amarelo</option>
+    </select>
+
+    <script>
+        function changeBackgroundColor() {
+            const color = document.getElementById('colorSelect').value;
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

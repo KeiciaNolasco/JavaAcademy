@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 - Formulário de cadastro de usuário com validação de senha</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 9</h1>
+    <p>Formulário de cadastro de usuário com validação de senha</p>
+    <form onsubmit="return validateForm()">
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required><br><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="confirmPassword">Confirmar Senha:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                alert('As senhas não coincidem!');
+                return false;
+            }
+            if (password.length < 6 || password.length > 10) {
+                alert('A senha deve ter entre 6 e 10 caracteres!');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - Formulário de seleção com checkbox</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 5</h1>
+    <p>Formulário de seleção com checkbox</p>
+    <form>
+        <input type="checkbox" id="checkbox1" onclick="checkCheckboxes()"> Item 1<br>
+        <input type="checkbox" id="checkbox2" onclick="checkCheckboxes()"> Item 2<br>
+        <input type="checkbox" id="checkbox3" onclick="checkCheckboxes()"> Item 3<br>
+        <input type="checkbox" id="checkbox4" onclick="checkCheckboxes()"> Item 4<br>
+        <button type="button" id="submitButton" disabled>Enviar</button>
+    </form>
+
+    <script>
+        function checkCheckboxes() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            document.getElementById('submitButton').disabled = checkboxes.length < 2;
+        }
+    </script>
+</body>
+</html>

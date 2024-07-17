@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8 - Botões que transformam o texto em maiúsculas e minúsculas</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 8</h1>
+    <p>Botões que transformam o texto em maiúsculas e minúsculas</p>
+    <div>
+        <p id="textParagraph">Este é um parágrafo de exemplo.</p>
+        <button onclick="changeTextColor('white')">Cor da fonte: Branco</button>
+        <button onclick="changeTextColor('black')">Cor da fonte: Preto</button>
+        <button onclick="changeBackgroundColor('white', 'textParagraph')">Cor de fundo: Branco</button>
+        <button onclick="changeBackgroundColor('black', 'textParagraph')">Cor de fundo: Preto</button>
+        <button onclick="changeFontSize(2)">+</button>
+        <button onclick="changeFontSize(-2)">-</button>
+        <button onclick="transformText('uppercase')">Maiúscula</button>
+        <button onclick="transformText('lowercase')">Minúscula</button>
+    </div>
+
+    <script>
+        function changeTextColor(color) {
+            document.getElementById('textParagraph').style.color = color;
+        }
+
+        function changeBackgroundColor(color, elementId) {
+            document.getElementById(elementId).style.backgroundColor = color;
+        }
+
+        function changeFontSize(delta) {
+            const paragraph = document.getElementById('textParagraph');
+            const currentSize = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+            const newSize = parseFloat(currentSize) + delta;
+            paragraph.style.fontSize = newSize + 'px';
+        }
+
+        function transformText(transform) {
+            const paragraph = document.getElementById('textParagraph');
+            paragraph.style.textTransform = transform;
+        }
+    </script>
+</body>
+</html>

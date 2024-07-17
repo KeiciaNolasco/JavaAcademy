@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 - Botão que oculta ou mostra um parágrafo</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 4</h1>
+    <p>Botão que oculta ou mostra um parágrafo</p>
+    <p id="textParagraph">Este é um parágrafo de exemplo.</p>
+    <button onclick="toggleParagraph()">Mostrar/Ocultar</button>
+
+    <script>
+        function toggleParagraph() {
+            const paragraph = document.getElementById('textParagraph');
+            if (paragraph.style.display === 'none') {
+                paragraph.style.display = 'block';
+            } else {
+                paragraph.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
