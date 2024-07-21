@@ -1,0 +1,86 @@
+15-Jul-2024 20:46:29.165 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.25
+15-Jul-2024 20:46:29.170 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 14 2024 19:31:59 UTC
+15-Jul-2024 20:46:29.170 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.25.0
+15-Jul-2024 20:46:29.170 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+15-Jul-2024 20:46:29.171 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            14.5
+15-Jul-2024 20:46:29.171 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+15-Jul-2024 20:46:29.171 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Users/leonardocastro/Library/Java/JavaVirtualMachines/corretto-21.0.3/Contents/Home
+15-Jul-2024 20:46:29.171 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.3+9-LTS
+15-Jul-2024 20:46:29.171 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Amazon.com Inc.
+15-Jul-2024 20:46:29.172 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25
+15-Jul-2024 20:46:29.172 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25
+15-Jul-2024 20:46:29.180 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/conf/logging.properties
+15-Jul-2024 20:46:29.180 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+15-Jul-2024 20:46:29.180 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+15-Jul-2024 20:46:29.180 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+15-Jul-2024 20:46:29.181 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+15-Jul-2024 20:46:29.181 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+15-Jul-2024 20:46:29.181 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+15-Jul-2024 20:46:29.181 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+15-Jul-2024 20:46:29.181 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+15-Jul-2024 20:46:29.181 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+15-Jul-2024 20:46:29.181 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25
+15-Jul-2024 20:46:29.181 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25
+15-Jul-2024 20:46:29.181 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/temp
+15-Jul-2024 20:46:29.188 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/leonardocastro/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+15-Jul-2024 20:46:29.413 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+15-Jul-2024 20:46:29.424 GRAVE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1016)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:525)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:961)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:708)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:731)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:302)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:472)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:565)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:239)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:194)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1304)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1317)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:632)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:77)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1014)
+		... 11 more
+15-Jul-2024 20:46:29.425 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [394] milliseconds
+15-Jul-2024 20:46:29.450 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+15-Jul-2024 20:46:29.450 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.25]
+15-Jul-2024 20:46:29.457 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/docs]
+15-Jul-2024 20:46:29.671 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/docs] has finished in [212] ms
+15-Jul-2024 20:46:29.671 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/manager]
+15-Jul-2024 20:46:29.697 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/manager] has finished in [26] ms
+15-Jul-2024 20:46:29.697 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/examples]
+15-Jul-2024 20:46:29.906 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/examples] has finished in [209] ms
+15-Jul-2024 20:46:29.907 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/ROOT]
+15-Jul-2024 20:46:29.919 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/ROOT] has finished in [12] ms
+15-Jul-2024 20:46:29.919 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/host-manager]
+15-Jul-2024 20:46:29.932 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/System/Volumes/Data/Users/leonardocastro/Desktop/JavaAcademy/Lucas Schlestein/29 - AULA/apache-tomcat-10.1.25/webapps/host-manager] has finished in [13] ms
+15-Jul-2024 20:46:29.935 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [509] milliseconds
+15-Jul-2024 20:46:29.939 GRAVE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:565)
+		at java.base/sun.nio.ch.Net.bind(Net.java:554)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:537)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:847)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:795)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+15-Jul-2024 20:46:29.940 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+15-Jul-2024 20:46:29.940 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+15-Jul-2024 20:46:29.957 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+15-Jul-2024 20:46:29.958 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
