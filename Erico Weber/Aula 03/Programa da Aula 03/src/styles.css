@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    font-family: Helvetica;
+    color:red;
+    margin: 20;
+}
+
+
+.class {
+    padding: 10;
+}
+
+h1 { 
+    background: blue;
+}

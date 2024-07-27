@@ -1,0 +1,20 @@
+<div class="class">
+    <h1>Two way data biding</h1>
+    <p>two-way-binding works!</p>
+    <form>
+        <input type="text" [(ngModel)]="animal" name="animal" placeholder="Digite o nome de um Animal" />
+        <div *ngIf="animal.length !== 0">
+            <button (click)="addAnimal()">Adicionar animal</button>
+        </div>
+    </form>
+    <button (click)="showAnimals()" >Exibir animais</button>
+    <ul>
+        <li *ngFor="let animal of listAnimals">
+            Animal: {{animal}}
+        </li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

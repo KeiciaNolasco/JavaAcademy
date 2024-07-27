@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>AngularJS Exercises</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+<body ng-controller="MainController">
+    <h1>AngularJS Exercises</h1>
+
+    <!-- Exercício 1: Vinculação de Dados -->
+    <h2>Exercício 1: Vinculação de Dados</h2>
+    <ul>
+        <li ng-repeat="item in items">{{ item }}</li>
+    </ul>
+
+    <!-- Exercício 2: Tratamento de Eventos -->
+    <h2>Exercício 2: Tratamento de Eventos</h2>
+    <button ng-click="handleClick()">Click me</button>
+
+    <!-- Exercício 3: Vinculação de Dados Bidirecional -->
+    <h2>Exercício 3: Vinculação de Dados Bidirecional</h2>
+    <input type="text" ng-model="inputValue" placeholder="Enter something">
+    <p>{{ inputValue }}</p>
+
+    <!-- Exercício 4: Diretivas Condicionais -->
+    <h2>Exercício 4: Diretivas Condicionais</h2>
+    <p my-directive>Hover over this text to see the directive in action.</p>
+
+    <!-- Exercício Adicional: Requisição GET -->
+    <h2>Exercício Adicional: Requisição GET</h2>
+    <button ng-click="fetchData()">Fetch Data</button>
+    <ul>
+        <li ng-repeat="post in posts">{{ post.title }}</li>
+    </ul>
+</body>
+</html>

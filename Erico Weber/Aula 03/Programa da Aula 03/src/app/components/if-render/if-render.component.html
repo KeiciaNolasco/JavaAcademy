@@ -1,0 +1,9 @@
+<div class="class">
+    <h1>If Render</h1>
+    <p *ngIf="canShow; else notshow"> {{name}} </p>
+    <ng-template #notshow>
+        <p> Não exibir o nome</p>
+    </ng-template>
+</div>
+
+
